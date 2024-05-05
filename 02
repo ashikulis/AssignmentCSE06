@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <time.h>
+
+int main()
+{
+   time_t tm;
+   time(&tm);
+   printf("Current Date/Time = %s\n\n\n", ctime(&tm));
+
+   int row, col, n;
+
+   scanf("%d", &n);
+
+   for (row = n; row > 1; row--) // or row >=2 or !=1
+   {
+       for (col = 1; col <= row; col++)
+       {
+           printf("%d", col);
+       }
+    
+       for (col = 1; col <= 2 * (n - row) - 1; col++)
+       {
+           printf(" ");
+       }
+    
+       for (col = row; col >= 1; col--)
+       {
+           if( col!=n)
+
+           printf("%d", col);
+       }
+       printf("\n");
+   }
+   for (row = 1 ; row <= n ; row++) // or row=2 or > 1
+   {
+       for (col = 1; col <= row; col++)
+       {
+           
+           printf("%d", col);
+       }
+    
+       for (col = 1; col <= 2 * (n - row) - 1; col++)
+       {
+           printf(" ");
+       }
+    
+       for (col = row; col >= 1; col--)
+       {
+           if( col!=n )
+
+           printf("%d", col);
+       }
+       printf("\n");
+   }
+   return 0;
+}

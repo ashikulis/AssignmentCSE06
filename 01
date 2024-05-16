@@ -1,29 +1,27 @@
 #include <stdio.h>
-#include <time.h>
-int main() 
-{
-    time_t tm;
-    time(&tm);
-    printf("Current Date/Time = %s\n\n\n", ctime(&tm));
-    
-    int row, col, n = 4;
-    for(row = 1; row <= n; row++) {
-        
-        for(col = 1; col < row; col++) 
+#include<time.h>
+int main() {
+   time_t tm;
+   time(&tm);
+   printf("Current Date/Time = %s\n\n\n", ctime(&tm));
+  
+   int n,row,col;
+   scanf("%d",&n);
+
+   for (int row = 0; row < n; row++)
+   {
+      
+       for (int col = 0; col < row; col++)
         {
-            printf(" ");
+           printf("  ");
         }
+       for (int col = n - row; col >= 1; col--)
         
-        for(col = 1; col <= n - row + 1; col++) 
-        {
-            printf("%d", col);
+           printf("%d ", col);
         }
-        
-        for(col = n - row; col >= 1; col--) 
-        {
-            printf("%d", col);
-        }
-        printf("\n");
-    }
-    return 0;
+
+       printf("\n");
+   }
+
+   return 0;
 }
